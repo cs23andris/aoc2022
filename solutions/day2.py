@@ -1,4 +1,4 @@
-# https://adventofcode.com/2022/day/1
+# assignment: https://adventofcode.com/2022/day/2
 
 from utils import read_input_file
 
