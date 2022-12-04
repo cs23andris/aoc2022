@@ -4,8 +4,7 @@ from utils import read_input_file
 import string
 
 input = read_input_file("3")
-alphabet = string.ascii_lowercase + string.ascii_uppercase
-
+alphabet = "." + string.ascii_lowercase + string.ascii_uppercase
 
 def part1(input):
 
@@ -15,7 +14,7 @@ def part1(input):
         sack1 = set(line[:split_in])
         sack2 = set(line[split_in:])
         shared_items = sack1.intersection(sack2)
-        sum_prio = [alphabet.index(item) + 1 for item in shared_items]
+        sum_prio = [alphabet.index(item) for item in shared_items]
         big_sum += sum(sum_prio)
         #print(sum_prio)
     
@@ -29,7 +28,7 @@ def part2(input):
         a,b,c = map(set, input[line:line+3])
         badge = list(a.intersection(b).intersection(c))[0]
         #print(badge)
-        sum_badges += alphabet.index(badge) + 1
+        sum_badges += alphabet.index(badge)
 
     return sum_badges
 
